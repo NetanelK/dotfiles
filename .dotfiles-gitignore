@@ -78,3 +78,12 @@
 *secret*
 *.p12
 *.pfx
+
+# Brewfile (global)
+!.Brewfile
+
+# Bootstrap script
+!.dotfiles-bootstrap.sh
+
+# VS Code extensions list
+!.vscode-extensions.txt
