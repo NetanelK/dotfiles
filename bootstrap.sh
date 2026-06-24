@@ -24,7 +24,6 @@ else
 fi
 
 # 3. Configure
-alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 git --git-dir="$HOME/.dotfiles" --work-tree="$HOME" config --local status.showUntrackedFiles no
 git --git-dir="$HOME/.dotfiles" --work-tree="$HOME" config --local core.excludesFile "$HOME/.dotfiles-gitignore"
 
@@ -80,7 +79,25 @@ if [ -f "$HOME/.config/dotfiles/macos-defaults.sh" ]; then
     bash "$HOME/.config/dotfiles/macos-defaults.sh"
 fi
 
-# 10. Claude settings from template
+# 10. iTerm2 settings
+if [ -f "$HOME/.config/dotfiles/iterm2.plist" ]; then
+    echo "Restoring iTerm2 settings..."
+    defaults import com.googlecode.iterm2 "$HOME/.config/dotfiles/iterm2.plist"
+fi
+
+# 11. Raycast settings
+if [ -f "$HOME/.config/dotfiles/raycast.rayconfig" ]; then
+    echo "Raycast config available — import manually:"
+    echo "  Open Raycast → Settings → Advanced → Import → ~/.config/dotfiles/raycast.rayconfig"
+fi
+
+# 12. Dock layout
+if [ -f "$HOME/.config/dotfiles/dock-apps.sh" ]; then
+    echo "Restoring Dock layout..."
+    bash "$HOME/.config/dotfiles/dock-apps.sh"
+fi
+
+# 13. Claude settings from template
 if [ ! -f "$HOME/.claude/settings.json" ] && [ -f "$HOME/.claude/settings.json.template" ]; then
     cp "$HOME/.claude/settings.json.template" "$HOME/.claude/settings.json"
     echo "Created ~/.claude/settings.json — fill in YOUR_AUTH_TOKEN_HERE"
