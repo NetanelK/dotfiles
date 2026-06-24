@@ -179,8 +179,6 @@ brew "zsh-autosuggestions"
 brew "zsh-completions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# Tool to list all active shortcuts of the current application
-cask "cheatsheet"
 # Terminal-based AI coding assistant
 cask "claude-code"
 # C and C++ IDE
