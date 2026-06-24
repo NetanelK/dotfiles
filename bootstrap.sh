@@ -65,7 +65,14 @@ ln -sf "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/th
 [ -d "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting" ] || \
     git clone https://github.com/zsh-users/zsh-syntax-highlighting "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
 
-# 8. VS Code extensions
+# 8. Vim-plug
+if [ ! -f "$HOME/.vim/autoload/plug.vim" ]; then
+    echo "Installing vim-plug..."
+    curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    vim +PlugInstall +qall 2>/dev/null || true
+fi
+
+# 9. VS Code extensions
 if command -v code &>/dev/null && [ -f "$HOME/.vscode-extensions.txt" ]; then
     echo "Installing VS Code extensions..."
     while IFS= read -r ext; do
@@ -73,13 +80,13 @@ if command -v code &>/dev/null && [ -f "$HOME/.vscode-extensions.txt" ]; then
     done < "$HOME/.vscode-extensions.txt"
 fi
 
-# 9. macOS defaults
+# 10. macOS defaults
 if [ -f "$HOME/.config/dotfiles/macos-defaults.sh" ]; then
     echo "Applying macOS defaults..."
     bash "$HOME/.config/dotfiles/macos-defaults.sh"
 fi
 
-# 10. iTerm2 settings
+# 11. iTerm2 settings
 if [ -f "$HOME/.config/dotfiles/iterm2.plist" ]; then
     echo "Restoring iTerm2 settings..."
     killall iTerm2 2>/dev/null || true
@@ -87,24 +94,24 @@ if [ -f "$HOME/.config/dotfiles/iterm2.plist" ]; then
     cp "$HOME/.config/dotfiles/iterm2.plist" "$HOME/Library/Preferences/com.googlecode.iterm2.plist"
 fi
 
-# 11. Raycast settings
+# 12. Raycast settings
 if [ -f "$HOME/.config/dotfiles/raycast.rayconfig" ]; then
     echo "Raycast config available — import manually:"
     echo "  Open Raycast → Settings → Advanced → Import → ~/.config/dotfiles/raycast.rayconfig"
 fi
 
-# 12. Developer folder structure
+# 13. Developer folder structure
 if [ -f "$HOME/.config/dotfiles/developer-setup.sh" ]; then
     bash "$HOME/.config/dotfiles/developer-setup.sh"
 fi
 
-# 13. Dock layout
+# 14. Dock layout
 if [ -f "$HOME/.config/dotfiles/dock-apps.sh" ]; then
     echo "Restoring Dock layout..."
     bash "$HOME/.config/dotfiles/dock-apps.sh"
 fi
 
-# 14. Claude settings from template
+# 15. Claude settings from template
 if [ ! -f "$HOME/.claude/settings.json" ] && [ -f "$HOME/.claude/settings.json.template" ]; then
     cp "$HOME/.claude/settings.json.template" "$HOME/.claude/settings.json"
     echo "Created ~/.claude/settings.json — fill in YOUR_AUTH_TOKEN_HERE"
