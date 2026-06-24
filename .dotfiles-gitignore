@@ -78,3 +78,27 @@
 *secret*
 *.p12
 *.pfx
+
+# Global gitignore
+!.gitignore
+
+# FZF
+!.fzf.zsh
+
+# Karabiner
+!.config/karabiner/
+!.config/karabiner/karabiner.json
+
+# GitHub CLI
+!.config/gh/
+!.config/gh/config.yml
+
+# VS Code keybindings
+!Library/Application Support/Code/User/keybindings.json
+
+# Granted
+!.granted/
+!.granted/config
+
+# npm
+!.npmrc

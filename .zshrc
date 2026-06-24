@@ -33,3 +33,13 @@ export PATH="/opt/homebrew/opt/expat/bin:$PATH"
 
 # Org-specific / local overrides (not tracked)
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+# Claude Code telemetry — managed by Intune
+export CLAUDE_CODE_ENABLE_TELEMETRY="1"
+export OTEL_METRICS_EXPORTER="otlp"
+export OTEL_LOGS_EXPORTER="otlp"
+export OTEL_EXPORTER_OTLP_PROTOCOL="http/protobuf"
+export OTEL_EXPORTER_OTLP_ENDPOINT="http://127.0.0.1:10198"
+export OTEL_EXPORTER_OTLP_HEADERS=""
+export OTEL_LOG_TOOL_DETAILS="1"
+export OTEL_RESOURCE_ATTRIBUTES="user.login=$(whoami),user.email=$(whoami)@kaltura.com"
