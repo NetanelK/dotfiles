@@ -43,3 +43,4 @@ zstyle ':fzf-tab:complete:brew-(install|uninstall|search|info):*-argument-rest' 
 zstyle ':fzf-tab:complete:docker-(run|push|images):argument-rest' fzf-preview 'docker inspect $word'
 zstyle ':fzf-tab:complete:*:options' fzf-preview
 export LESSOPEN='|~/.lessfilter %s'
+alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
