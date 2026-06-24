@@ -1,4 +1,4 @@
-# Ignore everything — whitelist tracked configs
+# Ignore everything — whitelist what we track
 *
 
 # ===== Shell =====
@@ -8,9 +8,8 @@
 
 # ===== Git =====
 !.gitconfig
-!.gitignore-global
 
-# ===== SSH (generic config only) =====
+# ===== SSH =====
 !.ssh/
 !.ssh/config
 !.ssh/aws-ssm-ec2-proxy-command.sh
@@ -49,28 +48,24 @@
 !Library/Application Support/Code/User/settings.json
 !Library/Application Support/Code/User/keybindings.json
 
-# ===== Karabiner =====
-!.config/
-!.config/karabiner/
-!.config/karabiner/karabiner.json
-
-# ===== Vim =====
-!.vimrc
-
-# ===== Dotfiles meta =====
-!.dotfiles-gitignore
-!.dotfiles-README.md
-!.dotfiles-bootstrap.sh
+# ===== Homebrew =====
 !.Brewfile
-!.vscode-extensions.txt
-!.macos-defaults.sh
 
-# ===== NOT tracked (org-specific, use .local pattern) =====
+# ===== VS Code extensions =====
+!.vscode-extensions.txt
+
+# ===== Dotfiles meta (scripts, examples, README) =====
+!.config/
+!.config/dotfiles/
+!.config/dotfiles/**
+!.dotfiles-gitignore
+
+# ===== NOT tracked (org-specific) =====
 .zshrc.local
 .env.local
 .gitconfig.local
 .ssh/config.local
-# .aws/ — tracked via example only
+.aws/
 .saml2aws
 
 # ===== Always deny =====
@@ -80,19 +75,3 @@
 *secret*
 *.p12
 *.pfx
-
-# ===== Example templates for .local files =====
-!.zshrc.local.example
-!.env.local.example
-!.gitconfig.local.example
-!.ssh/config.local.example
-!.aws/config.example
-!.saml2aws.example
-
-# AWS directory (allow example only)
-!.aws/
-!.aws/config.example
-.aws/config
-.aws/credentials
-.aws/saml2aws/
-.aws/cli/

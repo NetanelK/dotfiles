@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-# Bootstrap: curl -fsSL https://raw.githubusercontent.com/NetanelK/dotfiles/main/.dotfiles-bootstrap.sh | bash
+# Bootstrap: curl -fsSL https://raw.githubusercontent.com/NetanelK/dotfiles/main/.config/dotfiles/bootstrap.sh | bash
 
 echo "=== Dotfiles Bootstrap ==="
 
@@ -75,9 +75,9 @@ if command -v code &>/dev/null && [ -f "$HOME/.vscode-extensions.txt" ]; then
 fi
 
 # 9. macOS defaults
-if [ -f "$HOME/.macos-defaults.sh" ]; then
+if [ -f "$HOME/.config/dotfiles/macos-defaults.sh" ]; then
     echo "Applying macOS defaults..."
-    bash "$HOME/.macos-defaults.sh"
+    bash "$HOME/.config/dotfiles/macos-defaults.sh"
 fi
 
 # 10. Claude settings from template
@@ -89,12 +89,13 @@ fi
 echo ""
 echo "=== Bootstrap complete ==="
 echo ""
-echo "Create .local files for org-specific config:"
-echo "  ~/.zshrc.local     — org shell exports (OTEL, certs, tokens)"
-echo "  ~/.env.local       — org aliases (awsconsole, etc.)"
-echo "  ~/.gitconfig.local — org email ([user] email = you@company.com)"
-echo "  ~/.ssh/config.local — org SSH hosts"
-echo "  ~/.aws/config      — org AWS profiles"
-echo "  ~/.saml2aws        — org SAML federation"
+echo "Create org-specific .local files from examples:"
+echo "  cp ~/.config/dotfiles/examples/zshrc.local ~/.zshrc.local"
+echo "  cp ~/.config/dotfiles/examples/env.local ~/.env.local"
+echo "  cp ~/.config/dotfiles/examples/gitconfig.local ~/.gitconfig.local"
+echo "  cp ~/.config/dotfiles/examples/ssh-config.local ~/.ssh/config.local"
+echo "  cp ~/.config/dotfiles/examples/aws-config ~/.aws/config"
+echo "  cp ~/.config/dotfiles/examples/saml2aws ~/.saml2aws"
 echo ""
-echo "Then: source ~/.zshrc"
+echo "Then edit each file and fill in real values."
+echo "Finally: source ~/.zshrc"
