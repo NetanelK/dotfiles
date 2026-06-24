@@ -1,13 +1,10 @@
 tap "argoproj/tap"
 tap "aws/tap"
 tap "common-fate/granted"
-tap "cue-lang/tap"
 tap "danielfoehrkn/switch"
 tap "helm/tap"
 tap "homebrew/services"
 tap "iann0036/iamlive"
-tap "localstack/tap"
-tap "rad-security/tap", "https://github.com/rad-security/homebrew-tap.git"
 # Run your GitHub Actions locally
 brew "act"
 # Open-source, cross-platform JavaScript runtime environment
@@ -32,8 +29,6 @@ brew "libgit2"
 brew "bat"
 # Hosting Helm Charts via GitHub Pages and Releases
 brew "chart-releaser"
-# XML 1.0 parser
-brew "expat", link: true
 # Testing and linting Helm charts
 brew "chart-testing"
 # GNU compiler collection
@@ -55,13 +50,11 @@ brew "dive"
 # Docker Credential Helper for Amazon ECR
 brew "docker-credential-helper-ecr"
 # Modern replacement for 'ls'
-brew "exa"
+brew "eza"
 # Perl lib for reading and writing EXIF metadata
 brew "exiftool"
 # Program that can automate interactive applications
 brew "expect"
-# Validating, recursive, caching DNS resolver
-brew "unbound"
 # Collection of GNU find, xargs, and locate
 brew "findutils"
 # Firebase command-line tools
@@ -90,20 +83,12 @@ brew "gnupg"
 brew "go"
 # Library access to GnuPG
 brew "gpgme"
-# Graph visualization software from AT&T and Bell Labs
-brew "graphviz"
 # GNU grep, egrep and fgrep
 brew "grep"
-# Like cURL, but for gRPC
-brew "grpcurl"
 # Kubernetes package manager
 brew "helm"
 # Tool for automatically generating markdown documentation for helm charts
 brew "helm-docs"
-# Packet sniffer for displaying and logging HTTP traffic
-brew "httpry"
-# Configurable static site generator
-brew "hugo"
 # CLI wrapper for basic network utilities on macOS - ip command
 brew "iproute2mac"
 # Command-line interface for JFrog products
@@ -116,24 +101,14 @@ brew "kcat"
 brew "kind"
 # Package manager for kubectl plugins
 brew "krew"
-# Tool that can switch between kubectl contexts easily and create aliases
-brew "kubectx"
-# Template-free customization of Kubernetes YAML manifests
-brew "kustomize"
-# Kubernetes Native Policy Management
-brew "kyverno"
 # Input filter for the pager less
 brew "lesspipe"
-# Minify and secure Docker images
-brew "mintoolkit"
 # Utility for managing network connections
 brew "netcat"
 # Manage multiple Node.js versions
 brew "nvm"
 # SSL/TLS VPN implementing OSI layer 2 or 3 secure network extension
 brew "openvpn"
-# Search PDFs for strings matching a regular expression
-brew "pdfgrep"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Framework for managing multi-language pre-commit hooks
@@ -150,8 +125,6 @@ brew "ranger"
 brew "regclient"
 # CLI proxy to minimize LLM token consumption
 brew "rtk"
-# Powerful, clean, object-oriented scripting language
-brew "ruby", link: false
 # Rust toolchain installer
 brew "rustup"
 # Login and retrieve AWS temporary credentials using a SAML IDP
@@ -178,8 +151,6 @@ brew "tfsec"
 brew "thefuck"
 # Simplified and community-driven man pages
 brew "tldr"
-# Vulnerability scanner for container images, file systems, and Git repos
-brew "trivy"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # Tool for creating isolated virtual python environments
@@ -208,8 +179,6 @@ brew "zsh-autosuggestions"
 brew "zsh-completions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# Tools for building Android applications
-cask "android-studio"
 # Tool to list all active shortcuts of the current application
 cask "cheatsheet"
 # Terminal-based AI coding assistant
@@ -220,8 +189,6 @@ cask "clion"
 cask "discord"
 # App to build and share containerised applications and microservices
 cask "docker-desktop"
-# Tool to hide status bar icons
-cask "dozer"
 # Screen colour temperature controller
 cask "flux-app"
 cask "font-fira-code-nerd-font"
@@ -311,10 +278,6 @@ cask "the-unarchiver"
 cask "topnotch"
 # Open-source code editor
 cask "visual-studio-code"
-# Multimedia player
-cask "vlc"
-# Remote desktop application focusing on security
-cask "vnc-viewer"
 # Quick Look plugin for webp files
 cask "webpquicklook"
 # Collection of machine learning algorithms for data mining tasks
