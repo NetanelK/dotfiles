@@ -1,0 +1,17 @@
+[user]
+	name = Netanel Kadosh
+	email = netanel.kadosh@kaltura.com
+[credential]
+	helper = osxkeychain
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[core]
+	excludesfile = /Users/netanel.kadosh/.gitignore
+[pull]
+	rebase = true
+[rebase]
+	autostash = true
+[alias]
+	rph = rev-parse --short HEAD
+[credential "https://dev.azure.com"]
+	useHttpPath = true

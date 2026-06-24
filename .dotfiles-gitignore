@@ -1,0 +1,80 @@
+# Ignore everything — whitelist what we track
+*
+
+# Shell
+!.zshrc
+!.env.zsh
+!.fzf.zsh
+
+# Git
+!.gitconfig
+!.gitignore-global
+
+# SSH (config only)
+!.ssh/
+!.ssh/config
+!.ssh/aws-ssm-ec2-proxy-command.sh
+.ssh/id_*
+.ssh/*.pem
+.ssh/known_hosts*
+
+# AWS (profiles only, no credentials)
+!.aws/
+!.aws/config
+.aws/credentials
+.aws/saml2aws/
+
+# saml2aws
+!.saml2aws
+
+# Claude Code
+!.claude/
+!.claude/CLAUDE.md
+!.claude/RTK.md
+!.claude/rules/
+!.claude/rules/**
+!.claude/hooks/
+!.claude/hooks/*.sh
+!.claude/hooks/.rtk-hook.sha256
+!.claude/statusline-command.sh
+.claude/settings.json
+.claude/zscaler-root-ca.pem
+.claude/projects/
+.claude/jobs/
+.claude/worktrees/
+.claude/todos/
+.claude/conversations/
+.claude/statsig/
+.claude/credentials.json
+.claude/plugins/
+
+# Claude settings template (sanitized)
+!.claude/settings.json.template
+
+# VS Code
+!Library/
+!Library/Application Support/
+!Library/Application Support/Code/
+!Library/Application Support/Code/User/
+!Library/Application Support/Code/User/settings.json
+!Library/Application Support/Code/User/keybindings.json
+
+# Karabiner
+!.config/
+!.config/karabiner/
+!.config/karabiner/karabiner.json
+
+# Vim
+!.vimrc
+
+# This file and the readme
+!.dotfiles-gitignore
+!.dotfiles-README.md
+
+# Always deny
+*.pem
+*.key
+*credential*
+*secret*
+*.p12
+*.pfx

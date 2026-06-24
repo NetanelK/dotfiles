@@ -1,0 +1,294 @@
+# ============================================================
+# OVP Accounts
+# ============================================================
+
+[ovp]
+url                  = https://kaltura.okta.com/home/amazon_aws/0oa1hqb06a8BJcdma0h8/272
+username             = @OKTA_USER@
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 43200
+aws_profile          = ovp
+subdomain            = kaltura
+region               = us-east-1
+
+[ovp-devops]
+url                  = https://kaltura.okta.com/home/amazon_aws/0oa1hqb06a8BJcdma0h8/272
+username             = @OKTA_USER@
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 21600
+aws_profile          = ovp-devops
+subdomain            = kaltura
+role_arn             = arn:aws:iam::583352821080:role/okta-aws-administrator
+region               = us-east-1
+
+[ovp-devops-central]
+url                  = https://kaltura.okta.com/home/amazon_aws/0oa1hqb06a8BJcdma0h8/272
+username             = @OKTA_USER@
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = ovp-devops-central
+subdomain            = kaltura
+role_arn             = arn:aws:iam::785328604905:role/okta-aws-administrator
+region               = eu-central-1
+
+[ovp-devops-qa]
+url                  = https://kaltura.okta.com/home/amazon_aws/0oa1hqb06a8BJcdma0h8/272
+username             = @OKTA_USER@
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 21600
+aws_profile          = ovp-devops
+subdomain            = kaltura
+role_arn             = arn:aws:iam::383697330906:role/okta-aws-administrator
+region               = us-east-1
+
+[ovp-qa]
+url                  = https://kaltura.okta.com/home/amazon_aws/0oa1hqb06a8BJcdma0h8/272
+username             = @OKTA_USER@
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = ovp-qa
+subdomain            = kaltura
+role_arn             = arn:aws:iam::807896535855:role/okta-aws-administrator
+region               = us-east-1
+
+[ovp-buckets]
+url                  = https://kaltura.okta.com/home/amazon_aws/0oa21l0w8jiVztvzr0h8/272
+username             = @OKTA_USER@
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = ovp-buckets
+subdomain            = kaltura
+role_arn             = arn:aws:iam::573989702699:role/okta-aws-administrator
+region               = us-east-1
+
+# ============================================================
+# KME (Newrow) Accounts
+# ============================================================
+
+[newrow-nonprod]
+url                  = https://kaltura.okta.com/home/amazon_aws/0oa1ioevp8obQHYEK0h8/272
+username             = @OKTA_USER@
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = newrow-nonprod
+subdomain            = kaltura
+role_arn             = arn:aws:iam::555628334959:role/okta-aws-administrator
+region               = us-east-1
+
+[newrow-prod]
+url                  = https://kaltura.okta.com/home/amazon_aws/0oa1ioevp8obQHYEK0h8/272
+username             = @OKTA_USER@
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = newrow-prod
+subdomain            = kaltura
+role_arn             = arn:aws:iam::796836785901:role/okta-aws-administrator
+region               = us-east-1
+
+[newrow-china]
+url                  = https://kaltura.okta.com/home/amazon_aws/0oa1l9i79xp1Hmpym0h8/272
+username             = @OKTA_USER@
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 900
+aws_profile          = newrow-china
+subdomain            = kaltura
+role_arn             = arn:aws-cn:iam::423943499982:role/okta-aws-administrator
+region               = cn-north-1
+
+# ============================================================
+# PathFactory Accounts
+# ============================================================
+
+[pathfactory]
+url                  = https://kaltura.okta.com/home/amazon_aws/0oa1hqb06a8BJcdma0h8/272
+username             = @OKTA_USER@
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = pathfactory
+subdomain            = kaltura
+role_arn             = arn:aws:iam::229432523468:role/okta-aws-administrator
+region               = us-east-1
+
+[pathfactory-nonprod]
+url                  = https://kaltura.okta.com/home/amazon_aws/0oa1hqb06a8BJcdma0h8/272
+username             = @OKTA_USER@
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = pathfactory-nonprod
+subdomain            = kaltura
+role_arn             = arn:aws:iam::812630939461:role/okta-aws-administrator
+region               = us-east-1
+
+[pathfactory-datascience]
+url                  = https://kaltura.okta.com/home/amazon_aws/0oa1hqb06a8BJcdma0h8/272
+username             = @OKTA_USER@
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = pathfactory-datascience
+subdomain            = kaltura
+role_arn             = arn:aws:iam::288199541064:role/okta-aws-administrator
+region               = us-east-1
+
+[pathfactory-devops]
+url                  = https://kaltura.okta.com/home/amazon_aws/0oa1hqb06a8BJcdma0h8/272
+username             = @OKTA_USER@
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = pathfactory-devops
+subdomain            = kaltura
+role_arn             = arn:aws:iam::746862881245:role/okta-aws-administrator
+region               = us-east-1
+
+[pathfactory-staging]
+url                  = https://kaltura.okta.com/home/amazon_aws/0oa1hqb06a8BJcdma0h8/272
+username             = @OKTA_USER@
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = pathfactory-staging
+subdomain            = kaltura
+role_arn             = arn:aws:iam::948125332290:role/okta-aws-administrator
+region               = us-east-1
+
+[pathfactory-testteam]
+url                  = https://kaltura.okta.com/home/amazon_aws/0oa1hqb06a8BJcdma0h8/272
+username             = @OKTA_USER@
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = pathfactory-testteam
+subdomain            = kaltura
+role_arn             = arn:aws:iam::284490596576:role/okta-aws-administrator
+region               = us-east-1
+
+# ============================================================
+# Uberflip Accounts
+# ============================================================
+
+[uberflip-dev]
+url                  = https://kaltura.okta.com/home/amazon_aws/0oa1hqb06a8BJcdma0h8/272
+username             = @OKTA_USER@
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = uberflip-dev
+subdomain            = kaltura
+role_arn             = arn:aws:iam::503978365676:role/okta-aws-administrator
+region               = ca-central-1
+
+[uberflip-mgmt]
+url                  = https://kaltura.okta.com/home/amazon_aws/0oa1hqb06a8BJcdma0h8/272
+username             = @OKTA_USER@
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = uberflip-mgmt
+subdomain            = kaltura
+role_arn             = arn:aws:iam::854100580843:role/okta-aws-administrator
+region               = ca-central-1
+
+[uberflip-prod]
+url                  = https://kaltura.okta.com/home/amazon_aws/0oa1hqb06a8BJcdma0h8/272
+username             = @OKTA_USER@
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = uberflip-prod
+subdomain            = kaltura
+role_arn             = arn:aws:iam::551114098900:role/okta-aws-administrator
+region               = ca-central-1
+
+[uberflip-stg]
+url                  = https://kaltura.okta.com/home/amazon_aws/0oa1hqb06a8BJcdma0h8/272
+username             = @OKTA_USER@
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = uberflip-stg
+subdomain            = kaltura
+role_arn             = arn:aws:iam::237482657528:role/okta-aws-administrator
+region               = ca-central-1
+
+# ============================================================
+# Other
+# ============================================================
+
+[kaltura-genai]
+url                  = https://kaltura.okta.com/home/amazon_aws/0oa21l0w8jiVztvzr0h8/272
+username             = @OKTA_USER@
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = kaltura-genai
+subdomain            = kaltura
+role_arn             = arn:aws:iam::636556547543:role/okta-aws-administrator
+region               = us-east-1
+
+# ============================================================
+# Default
+# ============================================================
+
+[default]
+url                  = https://kaltura.okta.com/home/amazon_aws/0oa1ioevp8obQHYEK0h8/272
+username             = netanel.kadosh
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = newrow-nonprod
+subdomain            = kaltura
+region               = us-east-1
