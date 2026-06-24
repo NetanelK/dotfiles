@@ -8,6 +8,7 @@
 
 # ===== Git =====
 !.gitconfig
+!.vimrc
 
 # ===== SSH =====
 !.ssh/
