@@ -116,22 +116,6 @@ eval "$(zoxide init zsh)"
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 export PATH="/opt/homebrew/opt/bison/bin:$PATH"
 
-# Atlassian MCP
-export ATLASSIAN_API_TOKEN="$(security find-generic-password -s "atlassian-mcp-token" -a "netanel.kadosh@kaltura.com" -w 2>/dev/null)"
 
-# Zscaler root CA for Node.js (fixes "unable to get local issuer certificate")
-export NODE_EXTRA_CA_CERTS="$HOME/.claude/zscaler-root-ca.pem"
-
-# added by zscaler-cert-claude
-export NODE_EXTRA_CA_CERTS="$HOME/.claude/zscaler-root-ca.pem"
-export PATH="/opt/homebrew/opt/expat/bin:$PATH"
-
-# Claude Code telemetry — managed by Intune
-export CLAUDE_CODE_ENABLE_TELEMETRY="1"
-export OTEL_METRICS_EXPORTER="otlp"
-export OTEL_LOGS_EXPORTER="otlp"
-export OTEL_EXPORTER_OTLP_PROTOCOL="http/protobuf"
-export OTEL_EXPORTER_OTLP_ENDPOINT="http://127.0.0.1:10198"
-export OTEL_EXPORTER_OTLP_HEADERS=""
-export OTEL_LOG_TOOL_DETAILS="1"
-export OTEL_RESOURCE_ATTRIBUTES="user.login=$(whoami),user.email=$(whoami)@kaltura.com"
+# Org-specific / local overrides (not tracked)
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local

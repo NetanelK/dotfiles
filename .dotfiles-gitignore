@@ -1,33 +1,25 @@
-# Ignore everything — whitelist what we track
+# Ignore everything — whitelist tracked configs
 *
 
-# Shell
+# ===== Shell =====
 !.zshrc
 !.env.zsh
 !.fzf.zsh
 
-# Git
+# ===== Git =====
 !.gitconfig
 !.gitignore-global
 
-# SSH (config only)
+# ===== SSH (generic config only) =====
 !.ssh/
 !.ssh/config
 !.ssh/aws-ssm-ec2-proxy-command.sh
 .ssh/id_*
 .ssh/*.pem
 .ssh/known_hosts*
+.ssh/config.local
 
-# AWS (profiles only, no credentials)
-!.aws/
-!.aws/config
-.aws/credentials
-.aws/saml2aws/
-
-# saml2aws
-!.saml2aws
-
-# Claude Code
+# ===== Claude Code =====
 !.claude/
 !.claude/CLAUDE.md
 !.claude/RTK.md
@@ -37,6 +29,7 @@
 !.claude/hooks/*.sh
 !.claude/hooks/.rtk-hook.sha256
 !.claude/statusline-command.sh
+!.claude/settings.json.template
 .claude/settings.json
 .claude/zscaler-root-ca.pem
 .claude/projects/
@@ -48,10 +41,7 @@
 .claude/credentials.json
 .claude/plugins/
 
-# Claude settings template (sanitized)
-!.claude/settings.json.template
-
-# VS Code
+# ===== VS Code =====
 !Library/
 !Library/Application Support/
 !Library/Application Support/Code/
@@ -59,31 +49,34 @@
 !Library/Application Support/Code/User/settings.json
 !Library/Application Support/Code/User/keybindings.json
 
-# Karabiner
+# ===== Karabiner =====
 !.config/
 !.config/karabiner/
 !.config/karabiner/karabiner.json
 
-# Vim
+# ===== Vim =====
 !.vimrc
 
-# This file and the readme
+# ===== Dotfiles meta =====
 !.dotfiles-gitignore
 !.dotfiles-README.md
+!.dotfiles-bootstrap.sh
+!.Brewfile
+!.vscode-extensions.txt
+!.macos-defaults.sh
 
-# Always deny
+# ===== NOT tracked (org-specific, use .local pattern) =====
+.zshrc.local
+.env.local
+.gitconfig.local
+.ssh/config.local
+.aws/
+.saml2aws
+
+# ===== Always deny =====
 *.pem
 *.key
 *credential*
 *secret*
 *.p12
 *.pfx
-
-# Brewfile (global)
-!.Brewfile
-
-# Bootstrap script
-!.dotfiles-bootstrap.sh
-
-# VS Code extensions list
-!.vscode-extensions.txt

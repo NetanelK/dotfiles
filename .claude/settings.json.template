@@ -1,33 +1,14 @@
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://localhost:10443",
-    "ANTHROPIC_MODEL": "claude-4-6-opus[1m]",
     "ANTHROPIC_AUTH_TOKEN": "YOUR_AUTH_TOKEN_HERE",
-    "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-4.6",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-sonnet-4-5",
-    "CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS": "1",
-    "CLAUDE_CODE_SKIP_AUTH": "1",
-    "CLAUDE_CODE_ENABLE_TELEMETRY": "1",
     "MCP_TIMEOUT": "180000",
-    "MCP_TOOL_TIMEOUT": "180000",
-    "OTEL_METRICS_EXPORTER": "otlp",
-    "OTEL_LOGS_EXPORTER": "otlp",
-    "OTEL_LOG_TOOL_DETAILS": "1",
-    "OTEL_EXPORTER_OTLP_PROTOCOL": "http/protobuf",
-    "OTEL_EXPORTER_OTLP_ENDPOINT": "http://127.0.0.1:10198",
-    "OTEL_EXPORTER_OTLP_HEADERS": "",
-    "OTEL_RESOURCE_ATTRIBUTES": "user.login=netanel.kadosh,user.email=netanel.kadosh@kaltura.com"
-  },
-  "attribution": {
-    "commit": "",
-    "pr": ""
+    "MCP_TOOL_TIMEOUT": "180000"
   },
   "permissions": {
     "allow": [],
     "ask": [],
     "defaultMode": "auto"
   },
-  "model": "claude-opus-4-6[1m]",
   "hooks": {
     "PreToolUse": [
       {
@@ -35,7 +16,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/netanel.kadosh/.claude/hooks/rtk-rewrite.sh"
+            "command": "$HOME/.claude/hooks/rtk-rewrite.sh"
           }
         ]
       }
@@ -43,7 +24,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "bash /Users/netanel.kadosh/.claude/statusline-command.sh"
+    "command": "bash $HOME/.claude/statusline-command.sh"
   },
   "enabledPlugins": {
     "clangd-lsp@claude-plugins-official": true,
@@ -51,52 +32,15 @@
     "context7@claude-plugins-official": true,
     "github@claude-plugins-official": true,
     "aws-core@claude-plugins-official": true,
-    "nivver@kalt-ai-plugins": true,
-    "superpowers@claude-plugins-official": true,
-    "kaltura-jira@kalt-ai-plugins": true,
-    "rightsizing@litellm": true,
-    "prometheus-ops@litellm": true
-  },
-  "extraKnownMarketplaces": {
-    "kalt-ai-plugins": {
-      "source": {
-        "source": "github",
-        "repo": "kaltura/kalt-ai-plugin-marketplace"
-      }
-    },
-    "ruflo": {
-      "source": {
-        "source": "github",
-        "repo": "ruvnet/ruflo"
-      }
-    },
-    "my-org": {
-      "source": {
-        "source": "url",
-        "url": "http://localhost:10454/claude-code/marketplace.json"
-      }
-    }
+    "superpowers@claude-plugins-official": true
   },
   "spinnerVerbs": {
     "mode": "append",
-    "verbs": [
-      "Papiashvilying",
-      "Barcelizing",
-      "Avataring",
-      "PuserKusering",
-      "Re-sanpping",
-      "Batching",
-      "Nginxing",
-      "OpenRestying",
-      "Front-proxying",
-      "Niv-testing",
-      "MediaRepurposing"
-    ]
+    "verbs": []
   },
   "autoCompactWindow": 1000000,
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark",
   "skipAutoPermissionPrompt": true,
-  "claude-code.enableAuthLogin": true,
-  "planModeModel": "claude-opus-4-6[1m]"
+  "claude-code.enableAuthLogin": true
 }
