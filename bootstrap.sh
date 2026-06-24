@@ -93,13 +93,18 @@ if [ -f "$HOME/.config/dotfiles/raycast.rayconfig" ]; then
     echo "  Open Raycast → Settings → Advanced → Import → ~/.config/dotfiles/raycast.rayconfig"
 fi
 
-# 12. Dock layout
+# 12. Developer folder structure
+if [ -f "$HOME/.config/dotfiles/developer-setup.sh" ]; then
+    bash "$HOME/.config/dotfiles/developer-setup.sh"
+fi
+
+# 13. Dock layout
 if [ -f "$HOME/.config/dotfiles/dock-apps.sh" ]; then
     echo "Restoring Dock layout..."
     bash "$HOME/.config/dotfiles/dock-apps.sh"
 fi
 
-# 13. Claude settings from template
+# 14. Claude settings from template
 if [ ! -f "$HOME/.claude/settings.json" ] && [ -f "$HOME/.claude/settings.json.template" ]; then
     cp "$HOME/.claude/settings.json.template" "$HOME/.claude/settings.json"
     echo "Created ~/.claude/settings.json — fill in YOUR_AUTH_TOKEN_HERE"
