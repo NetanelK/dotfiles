@@ -5,6 +5,9 @@ set -e
 
 echo "Applying macOS defaults..."
 
+# Appearance
+defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
+
 # Finder
 defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
@@ -28,8 +31,15 @@ defaults write com.apple.dock show-recents -bool false
 defaults write com.apple.screencapture location -string "$HOME/Desktop"
 defaults write com.apple.screencapture type -string "png"
 
+# Disable Spotlight hotkey (⌘Space) so Raycast can use it
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:64:enabled false" \
+    ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:164:enabled false" \
+    ~/Library/Preferences/com.apple.symbolichotkeys.plist
+
 # Misc
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 
-echo "Done. Restart (or log out) for all changes to take effect."
+echo "Done. Log out and back in for all changes to take effect."
+echo "Then open Raycast and set ⌘Space as its hotkey."
