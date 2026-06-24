@@ -7,6 +7,7 @@ echo "Applying macOS defaults..."
 
 # Appearance
 defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
+osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to true'
 
 # Finder
 defaults write com.apple.finder ShowPathbar -bool true
