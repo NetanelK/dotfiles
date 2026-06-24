@@ -21,13 +21,6 @@ alias kdebug="kubectl debug --image nicolaka/netshoot --stdin --tty --profile=ne
 alias gcleanup="git branch -vv --format '%(refname:strip=2) %(upstream:track)' | awk '/gone]/{print \$1}' | xargs -n1 git branch -D"
 alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
-# Completions
-if type brew &>/dev/null; then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-  autoload -Uz compinit
-  compinit
-fi
-
 # FZF config
 zstyle ':fzf-tab:complete:(ls|cat|cd|vim|less):*' fzf-preview 'less ${(Q)realpath}'
 zstyle ':fzf-tab:complete:(ls|cat|cd|vim|less):options' fzf-preview
