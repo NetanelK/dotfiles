@@ -82,7 +82,9 @@ fi
 # 10. iTerm2 settings
 if [ -f "$HOME/.config/dotfiles/iterm2.plist" ]; then
     echo "Restoring iTerm2 settings..."
-    defaults import com.googlecode.iterm2 "$HOME/.config/dotfiles/iterm2.plist"
+    killall iTerm2 2>/dev/null || true
+    sleep 1
+    cp "$HOME/.config/dotfiles/iterm2.plist" "$HOME/Library/Preferences/com.googlecode.iterm2.plist"
 fi
 
 # 11. Raycast settings
