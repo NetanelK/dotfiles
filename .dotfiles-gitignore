@@ -59,6 +59,8 @@
 !.config/dotfiles/
 !.config/dotfiles/**
 !.dotfiles-gitignore
+!README.md
+!bootstrap.sh
 
 # ===== NOT tracked (org-specific) =====
 .zshrc.local

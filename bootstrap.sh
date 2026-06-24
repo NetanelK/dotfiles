@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-# Bootstrap: curl -fsSL https://raw.githubusercontent.com/NetanelK/dotfiles/main/.config/dotfiles/bootstrap.sh | bash
+# Bootstrap: curl -fsSL https://raw.githubusercontent.com/NetanelK/dotfiles/main/bootstrap.sh | bash
 
 echo "=== Dotfiles Bootstrap ==="
 

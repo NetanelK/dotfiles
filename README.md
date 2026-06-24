@@ -5,7 +5,7 @@ Portable dev environment. Org-specific config lives in `.local` files (not track
 ## Setup
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/NetanelK/dotfiles/main/.config/dotfiles/bootstrap.sh | bash
+curl -fsSL https://raw.githubusercontent.com/NetanelK/dotfiles/main/bootstrap.sh | bash
 ```
 
 ## Repo Structure
