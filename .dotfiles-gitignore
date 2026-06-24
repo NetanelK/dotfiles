@@ -70,7 +70,7 @@
 .env.local
 .gitconfig.local
 .ssh/config.local
-.aws/
+# .aws/ — tracked via example only
 .saml2aws
 
 # ===== Always deny =====
@@ -80,3 +80,19 @@
 *secret*
 *.p12
 *.pfx
+
+# ===== Example templates for .local files =====
+!.zshrc.local.example
+!.env.local.example
+!.gitconfig.local.example
+!.ssh/config.local.example
+!.aws/config.example
+!.saml2aws.example
+
+# AWS directory (allow example only)
+!.aws/
+!.aws/config.example
+.aws/config
+.aws/credentials
+.aws/saml2aws/
+.aws/cli/

@@ -1,0 +1,10 @@
+# Org-specific git config
+# Copy to ~/.gitconfig.local and fill in values
+
+[user]
+    email = you@company.com
+
+# Jira autolinks (optional)
+# [gitlens "autolinks"]
+#     prefix = "PROJ-"
+#     url = "https://company.atlassian.net/browse/PROJ-<num>"

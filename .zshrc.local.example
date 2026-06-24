@@ -1,0 +1,15 @@
+# Org-specific zsh config
+# Copy to ~/.zshrc.local and fill in values
+
+# Corporate proxy CA (if needed)
+# export NODE_EXTRA_CA_CERTS="$HOME/.claude/your-corp-ca.pem"
+
+# Atlassian/Jira MCP token (macOS Keychain)
+# export ATLASSIAN_API_TOKEN="$(security find-generic-password -s "atlassian-mcp-token" -a "you@company.com" -w 2>/dev/null)"
+
+# Telemetry (if your org requires it)
+# export OTEL_METRICS_EXPORTER="otlp"
+# export OTEL_LOGS_EXPORTER="otlp"
+# export OTEL_EXPORTER_OTLP_PROTOCOL="http/protobuf"
+# export OTEL_EXPORTER_OTLP_ENDPOINT="http://127.0.0.1:10198"
+# export OTEL_RESOURCE_ATTRIBUTES="user.login=$(whoami),user.email=$(whoami)@company.com"

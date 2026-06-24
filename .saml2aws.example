@@ -1,0 +1,15 @@
+# saml2aws configuration
+# Copy to ~/.saml2aws and fill in values
+
+# [default]
+# url                  = https://company.okta.com/home/amazon_aws/APP_ID/272
+# username             = your-username
+# provider             = Okta
+# mfa                  = PUSH
+# skip_verify          = false
+# aws_urn              = urn:amazon:webservices
+# aws_session_duration = 3600
+# aws_profile          = default
+# subdomain            = company
+# role_arn             = arn:aws:iam::123456789012:role/your-role
+# region               = us-east-1
